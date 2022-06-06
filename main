@@ -1,0 +1,30 @@
+let fluit = ['peach', 'orange', 'grape', 'strawbery'];
+//for文 配列の数だけ、ループさせる
+for(i=0; i < fluit.length; i++) {
+    console.log(i, fluit[i]);
+}
+
+
+//コールバック関数　関数の引数に関数をとるものをいう。
+//引数はこちらで定義するが、どのようなものがいいのか？
+
+function hello(Fruit) {
+    const result = Fruit(); //関数の結果を代入
+    console.log('Hello I like ' + result );
+}
+
+function hello(Fruit) {
+    console.log('Hello I like ' + Fruit() );
+}
+
+//括弧を無くすと関数自体が表示される
+// function hello(Fruit) {
+//     console.log('Hello I like ' + Fruit );
+// }
+
+function getFruit() {
+    return 'momo';
+}
+
+hello(getFruit);
+
